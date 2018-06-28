@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/local/webserver/mongodb/bin/mongod -f /root/sh/mongodb/mongodb.conf & 2>1&

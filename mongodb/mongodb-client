@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/local/webserver/mongodb/bin/mongo localhost:27017

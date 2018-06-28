@@ -1,0 +1,15 @@
+#bin:/usr/sbin/php-fpm
+#conf:/etc/php-fpm.conf
+#
+#bin:/usr/local/php/sbin//php-fpm
+#conf:/usr/local/php/etc/php-fpm.conf
+#
+#
+#
+##测试php-fpm配置
+#/usr/local/php/sbin/php-fpm -t
+#/usr/local/php/sbin/php-fpm -c /usr/local/php/etc/php.ini -y /usr/local/php/etc/php-fpm.conf -t
+#
+##启动php-fpm
+#/usr/local/php/sbin/php-fpm
+#/usr/local/php/sbin/php-fpm -c /usr/local/php/etc/php.ini -y /usr/local/php/etc/php-fpm.conf

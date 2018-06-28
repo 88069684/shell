@@ -1,0 +1,1 @@
+phpdoc -o HTML:frames:default -f baseTags.php -t /var/www/html/docs
