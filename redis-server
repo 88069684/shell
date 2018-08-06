@@ -1,3 +1,0 @@
-#!/bin/sh
-/usr/local/webserver/redis/src/redis-server /usr/local/webserver/redis/redis.con
-f >>/var/log/redis/redis.log   &

@@ -1,2 +1,0 @@
-#!/bin/sh
-/usr/local/webserver/redis/src/redis-cli  -p 6379 shutdown
