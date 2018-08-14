@@ -3,6 +3,7 @@ remotePort="51212"
 remoteUser="jenkins"
 localPath="/xs/git_project/"
 remotePath="/usr/local/tomcat/"
+remoteShell="/usr/local/tomcat/shell/"
 function sendWarToRemote(){
         currentTime=`date "+%Y%m%d_%H%M%S"`
     	remote_path=${remotePath}${group}/${project}
