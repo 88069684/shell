@@ -1,4 +1,4 @@
-
+#!/bin/sh
 ##svn启动命令##
 svnserve -d -r /data0/svndata/ --listen-host 182.92.105.47
 ##svn创建版本库的命令##
