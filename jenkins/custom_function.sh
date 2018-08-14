@@ -1,20 +1,22 @@
 #!/bin/bash
+remotePort="51212"
+remoteUser="jenkins"
+localPath="/xs/git_project/"
+remotePath="/usr/local/tomcat/"
 function sendWarToRemote(){
-        remote_port=51212
-        remote_user=jenkins
         currentTime=`date "+%Y%m%d_%H%M%S"`
-        remote_path=/usr/local/tomcat/${group}/${project}
-        local_war=/xs/git_project/${group}/${project}/target/${war_name}.war
+    	remote_path=${remotePath}${group}/${project}
+    	local_war=${localPath}${group}/${project}/target/${war_name}.war
         echo $local_war
         remote_war=${remote_path}/war/${war_name}${currentTime}.war
         #发送到远程服务器/usr/local/tomcat/${group}
-        ssh ${remote_user}@${remote_ip} -p${remote_port} "/bin/sh ${remote_path}/bin/shutdown.sh" && sleep 2
-        #ssh ${remote_user}@${remote_ip} -p${remote_port} "ps -ef | grep ${project}| grep -v "grep" |awk '{print $2}' | xargs kill -9 "
+        ssh ${remoteUser}@${remote_ip} -p${remotePort} "/bin/sh ${remote_path}/bin/shutdown.sh" && sleep 2
+        #ssh ${remoteUser}@${remote_ip} -p${remotePort} "ps -ef | grep ${project}| grep -v "grep" |awk '{print $2}' | xargs kill -9 "
         echo "关闭成功"
-        scp -P${remote_port} ${local_war} ${remote_user}@${remote_ip}:${remote_war}
-        ssh ${remote_user}@${remote_ip} -p${remote_port} "rm -rf ${remote_path}/webapps/*"
-        ssh ${remote_user}@${remote_ip} -p${remote_port} "unzip ${remote_war} -d ${remote_path}/webapps/${project}"
-        ssh ${remote_user}@${remote_ip} -p${remote_port} "/bin/sh ${remote_path}/bin/startup.sh"
+        scp -P${remotePort} ${local_war} ${remoteUser}@${remote_ip}:${remote_war}
+        ssh ${remoteUser}@${remote_ip} -p${remotePort} "rm -rf ${remote_path}/webapps/*"
+        ssh ${remoteUser}@${remote_ip} -p${remotePort} "unzip ${remote_war} -d ${remote_path}/webapps/${project}"
+        ssh ${remoteUser}@${remote_ip} -p${remotePort} "/bin/sh ${remote_path}/bin/startup.sh"
 }
 function getWarName(){
     war=$project

@@ -4,16 +4,16 @@ group=$1
 project=$2
 remote=$3
 if [ -z "$project" ];then
-        echo "project 为空,示例 xxx.sh risk_admin risk"
+        echo "project不能为空,示例 xxx.sh project group remote"
         exit
 fi
 
 if [ -z "$group" ];then
-        echo "group 为空,示例 xxx.sh risk_admin risk"
+        echo "group不能为空,示例 xxx.sh project group remote"
         exit
 fi
 if [ -z "$remote" ];then
-        echo "group 为空,示例 xxx.sh risk_admin risk node1"
+        echo "remote不能为空,示例 xxx.sh project group remote"
         exit
 fi
 war=`getWarName`

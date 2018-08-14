@@ -19,6 +19,7 @@ cd ${git_path} && git pull && git checkout ${branch} && git pull
 case   "$1"   in
         wenjuan_admin)
                 echo ${group} ${project}
+                ##打包springboot项目##
                 mvn clean package -Dspring.profiles.active=pro
                 ;;
         *)
