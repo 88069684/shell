@@ -5,4 +5,4 @@ userName=""
 passWord=""
 host=""
 database=""
-tables={}
+tables=()
