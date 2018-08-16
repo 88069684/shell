@@ -1,2 +1,0 @@
-#!/bin/sh
-/usr/local/webserver/memcache/bin/memcached -d -m 10 -u root -l 127.0.0.1 -p 11211 -c 512 -P /var/run/memcached.id
