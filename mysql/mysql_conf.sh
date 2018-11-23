@@ -1,8 +1,10 @@
 #!/bin/sh
 ###数据库配置文件###
+##备份文件存储路径##
 filePath=""
+##账号信息##
+host=""
 userName=""
 passWord=""
-host=""
 database=""
 tables=()
