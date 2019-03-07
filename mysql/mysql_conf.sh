@@ -1,10 +1,10 @@
 #!/bin/sh
 ###数据库配置文件###
 ##备份文件存储路径##
-filePath=""
+filePath="/tmp/mysql"
 ##账号信息##
-host=""
-userName=""
-passWord=""
-database=""
+host="10.200.0.183"
+userName="appuser"
+passWord="appuser007"
+databases=("test")
 tables=()
